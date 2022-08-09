@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+<head>
+  <style>
+    body {
+      background-color: #ddd;
+      color: #444;
+      font-family: Helvetica;
+      line-height: 1.5;
+      width: 60%;
+      margin: auto;
+      padding: 30px;
+    }
+    main {
+      background: #ffffff;
+      font-family: Helvetica;
+      border-radius: 10px;
+      padding: 25px;
+    }
+    section {
+      border-color: grey;
+    }
+    h1, h2 {
+      color: rgb(140, 76, 8);
+      user-select: none;
+    }
+  </style>
+  <meta charset="utf-8">
+  <title>“Currículo de Fulano de Tal</title>
+</head>
+<body>
+  <main>
+    <img src="images/avatar.jpg" alt="foto de exemplo" height="120">
+
+    <h1>Fulano da Silva</h1>
+
+    <hr>
+
+    <section>
+      <h2>Perfil</h2>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut ligula massa. Morbi laoreet et felis ac dapibus. Aenean cursus tincidunt enim, vel condimentum ipsum rutrum sed. In rhoncus augue id sapien ullamcorper, vel consectetur libero consequat.
+        <br>
+        Duis eget erat et dolor facilisis finibus sit amet id est. Mauris egestas velit a sem euismod, non cursus nibh sagittis. Pellentesque quis nunc sit amet purus efficitur maximus et eget diam. Vivamus pulvinar nisi aliquam rhoncus dignissim.
+      </p>
+
+      <hr>
+    </section>
+
+
+
+    <section>
+      <h2>Principais Competências</h2>
+      <ul>
+        <li>Programador <b>Android</b></li>
+        <li>Desenvolvimento <b>Kotlin</b></li>
+        <li>Teste</li>
+        <li>Exemplos</li>
+        <li>API</li>
+      </ul>
+    </section>
+
+    <hr>
+    <section>
+
+      <h2>Formação Acadêmica</h2>
+      <p>
+        Bacharelado em Sistemas de Informacao na <a href="https://ufu.br/">Universidade Federal de Uberlandia</a> (2023) e Mestrado em Computação na <a href="https://www.unicamp.br/unicamp/">Universidade Estadual de Campinas</a>
+      </p>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Experiencia Profissional</h2>
+      <ol>
+        <li>
+          Starlink (2019-2021)
+          <ul>
+            <li>Lancamento de satelites</li>
+            <li>Desenvolvimento de foguetes</li>
+          </ul>
+        </li>
+        <li>
+          Tesla (2021-atual)
+          <ul>
+            <li>Criacao de carro eletrico</li>
+            <li>Desenvolvimento de baterias</li>
+          </ul>
+        </li>
+      </ol>
+
+      <a href="experiencia.html">Veja as experiencias profissionais em detalhes</a>
+    </section>
+
+
+    <hr>
+
+    <section>
+
+      <h2>Contato</h2>
+      <p>
+        <img src="images/loc_ic.png" alt="icone de localizacao" height="30" width="30">
+        Joao Naves de Avila, Santa Monica, Uberlandia
+        <br>
+        <br>
+        <img src="images/phone_ic.png" alt="icone de telefone" height="30" width="30">
+        <a href="tel:034-9999-9999">(34) 9999-9999</a>
+        <br>
+        <br>
+        <img src="images/mail_ic.png" alt="icone de email" height="30" width="30">
+        <a href="mailto:joe@example.com">fulano@gmail.com</a>
+        <br>
+      </p>
+        
+    </section>
+
+  </main>
+
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const nodeH2 = document.querySelectorAll("h2")
+
+    nodeH2.forEach(node => {
+      node.addEventListener("click", function() {
+        node.nextElementSibling.style.display = "none"
+      })
+      node.addEventListener("dblclick", function() {
+        node.nextElementSibling.style.display = "block"
+      })
+
+    })
+  })
+
+</script>
+
+</body>
+</html>
