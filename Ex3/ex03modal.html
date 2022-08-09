@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo JavaScript Modal</title>
+    <style>
+        body {
+            font-family: "Helvetica Neve", Arial, Helvetica, sans-serif;
+            line-height: 1.5rem;
+            background-image: url("images/bg2.jpg");
+            background-size: cover;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .modal {
+            background-color: #0006;
+            display: none;
+            width: 100%;
+            height: 100%;
+
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            overflow: auto;
+            z-index: 1;
+        }
+
+        .modalContent {
+            background-color: #eee;
+            margin: auto;
+            padding: 20px;
+            border: 0.5 solid #aaa;
+            box-shadow: 0 0 5px #333;
+
+            width: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .modalContent button {
+            width: 100%;
+            background-color: rgb(179, 213, 235);
+            border-radius: 2px;
+            border: 1px solid rgb(159, 200, 255);
+            padding: 5px;
+            color: #333;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .modalContent button:hover {
+            background-color: rgb(200, 223, 243);
+        }
+    </style>
+</head>
+
+<body>
+    
+    <main>
+        <h1>A FACOM</h1>
+        <p>A Faculdade de Computação (FACOM) da Universidade Federal de Uberlândia foi criada em 2000, a partir do extinto Departamento de Informática (DEINF), criado em 1998, no âmbito do CETEC.</p>
+
+        <p>No início dos anos 2000 foi criado na Faculdade o Programa de Pós-Graduação em Ciência da Computação.</p>
+
+        <button type="button" id="btnOpenModal">Abrir Modal</button>
+
+    </main>
+
+<div id="modalTeste" class="modal">
+    <!-- div correspondente a janela modal -->
+
+    <div class="modalContent">
+        <h2>Olá! Seja bem vindo!</h2>
+        <button class="buttonClose">Ok</button>
+    </div>
+    <!-- outro elemento div, ele tem a função do escurecimento da página -->
+
+</div>
+
+<script>
+
+    window.onload = function() {
+
+        const modal = document.querySelector(".modal")
+        // Seleção do objeto correspondente ao div modal, pela classe do elemento
+        const buttonClose = modal.querySelector(".buttonClose")
+        // Com esse código é realizado a alteração para o modal ser exibido, e em const modal temos a seleção do objeto correspondente ao div modal pela classe do elemento, e a seleção do botão de fechar que está localizado dentro do conteúdo modal.
+
+        buttonClose.addEventListener("click", function() {
+            modal.style.display = 'none'
+            // Adição de funções anônimas que vão ser executadas quando os botões forem acionados, alterando para none
+        })
+        // funções anônimas que serão executadas quando esses botões forem acionados, que altera a propriedade display do modal para none, ele será fechado e o modal desaparece.
+        const buttonOpenModal = document.getElementById("btnOpenModal")
+        // Abrir modal, com o botão com id no html, e aqui faz a seleção do elemento correspondente ao botal, usando 'getElementById'
+        buttonOpenModal.addEventListener("click", function() {
+        // Adicionando a função para ser executada no click da função.
+            modal.style.display = "block"
+            // Alterando a propriedade display do objeto da div do modal para block.
+        })
+        // Faz a seleção do elemento correspondente ao botão, usando o getELementeById, e a função que será executada no click do botão, e alterei o display para block para se tornar visível.
+    }
+</script>
+
+</body>
+</html>
